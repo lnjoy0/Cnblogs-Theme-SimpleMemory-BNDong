@@ -1,5 +1,7 @@
 /*!
- * @original author: BNDong, dbnuo@foxmail.com
+ * https://www.cnblogs.com/lnjoy/
+ * @original_address: https://github.com/BNDong
+ * @original_author: BNDong, dbnuo@foxmail.com
  * @changer: lnjoy, enjoy_july@163.com
  **/
 if (initCheck()) {
@@ -92,11 +94,11 @@ if (initCheck()) {
     window.cnblogsConfigDefault = {
         GhUserName: 'lnjoy',
         GhRepositories: 'Cnblogs-Theme-SimpleMemory-BNDong',
-        GhVersions: 'v1.3.3',
+        GhVersions: '',
         CnVersions: "",
         blogUser: "",
         blogAvatar: "",
-        blogStartDate: "2019-01-01",
+        blogStartDate: "2020-01-01",
         menuCustomList: {},
         menuNavList: [],
         menuUserInfoBgImg: '',
@@ -173,12 +175,12 @@ if (initCheck()) {
             animateSections: true
         },
         homeTopImg: [
-            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/home_top_bg.webp"
+            "https://cdn.jsdelivr.net/gh/EnJoy-git/Cnblogs-Theme-SimpleMemory-BNDong/img/webp/home_top_bg.webp"
         ],
         homeBannerText: "",
         homeBannerTextType: "jinrishici",
         essayTopImg: [
-            "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/nothome_top_bg.webp"
+            "https://cdn.jsdelivr.net/gh/EnJoy-git/Cnblogs-Theme-SimpleMemory-BNDong/img/webp/nothome_top_bg.webp"
         ],
         essayCodeHighlightingType: 'cnblogs',
         essayCodeHighlighting: '',
@@ -310,7 +312,7 @@ function getVersionConfig() {
             }
         });
 
-    } else if(window.cnblogsConfig.GhUserName === 'BNDong') {
+    } else if(window.cnblogsConfig.GhUserName === 'lnjoy') {
         window.themeVersion = [
             [
                 "v1.1.6",
