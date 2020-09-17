@@ -433,7 +433,7 @@ function init() {
 // get file url
 function getJsDelivrUrl(file, directory) {
     file = setFileNameMin(file, directory);
-    return 'https://cdn.jsdelivr.net/gh/'+(window.cnblogsConfig.GhUserName)+'/'+(window.cnblogsConfig.GhRepositories)+'@'+(window.cnblogsConfig.GhVersions)+'/' + (file ? file : '');
+    return 'https://cdn.jsdelivr.net/gh/EnJoy-git/Cnblogs-Theme-SimpleMemory-BNDong/' + (file ? file : '');
 }
 
 // optimization file name
