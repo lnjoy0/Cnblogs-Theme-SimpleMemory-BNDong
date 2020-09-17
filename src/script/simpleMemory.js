@@ -1,7 +1,6 @@
 /*!
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
+ * @original author: BNDong, dbnuo@foxmail.com
+ * @changer: lnjoy, enjoy_july@163.com
  **/
 if (initCheck()) {
 
@@ -91,9 +90,9 @@ if (initCheck()) {
         '<div id="rightMenu"></div>';
 
     window.cnblogsConfigDefault = {
-        GhUserName: 'BNDong',
-        GhRepositories: 'Cnblogs-Theme-SimpleMemory',
-        GhVersions: 'v1.3.0',
+        GhUserName: 'lnjoy',
+        GhRepositories: 'Cnblogs-Theme-SimpleMemory-BNDong',
+        GhVersions: 'v1.3.3',
         CnVersions: "",
         blogUser: "",
         blogAvatar: "",
