@@ -292,6 +292,88 @@ function initCheck() {
     return false;
 }
 
+// get version config
+function getVersionConfig() {
+
+    window.cnblogsConfig.CnVersions = window.cnblogsConfig.GhVersions;
+
+    if (window.cnblogsConfig.isVersionMapping) {
+        var url = 'https://raw.githubusercontent.com/' + window.cnblogsConfig.GhUserName + '/' + window.cnblogsConfig.GhRepositories + '/master/version.conf';
+
+        $.ajax({
+            type: "get",
+            url: url,
+            dataType: "text",
+            async: false,
+            success: function(conf)
+            {
+                window.themeVersion = conf ? JSON.parse(conf) : false;
+                window.themeVersion && setConfVersion();
+            }
+        });
+
+    } else if(window.cnblogsConfig.GhUserName === 'BNDong') {
+        window.themeVersion = [
+            [
+                "v1.1.6",
+                "d8adfb50252062f658350bda29d7145f5eff0b80"
+            ]
+            ,
+            [
+                "v1.1.8",
+                "461aab69de17a84f0af9ff0c326bfcb94438b06c"
+            ]
+            ,
+            [
+                "v1.2.2",
+                "08eab99303d7c463a495adabd8feccc784a8507d"
+            ]
+            ,
+            [
+                "v1.2.3",
+                "36901bf16e2aa3656d4e6f78d44486273b0b8972"
+            ]
+            ,
+            [
+                "v1.2.4",
+                "9354db2147c11fc56cfe02a502f1f8229332fc2f"
+            ]
+            ,
+            [
+                "v1.2.5",
+                "4d744f980758500078df349520472e3b360fb841"
+            ]
+        ];
+        setConfVersion();
+    } else {
+        init();
+    }
+
+    function setConfVersion() {
+        var confVersion = getEndConfVal(window.cnblogsConfig.GhVersions);
+
+        if (confVersion) {
+            window.cnblogsConfig.GhVersions = confVersion;
+        }
+
+        init();
+    }
+
+    function getEndConfVal(thisGhVersion) {
+        var endVal = '';
+        window.themeVersion && $.each(window.themeVersion, function (i) {
+            if (window.themeVersion[i][0] === thisGhVersion) {
+                endVal = window.themeVersion[i][1]; return false;
+            }
+        });
+        if (endVal === '') {
+            return thisGhVersion;
+        } else {
+            return getEndConfVal(endVal);
+        }
+    }
+}
+
 // init
 function init() {
 
