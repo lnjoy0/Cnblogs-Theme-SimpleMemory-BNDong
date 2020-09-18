@@ -1,8 +1,8 @@
 /*!
- * DATE: 2018-03-13
- * UPDATES AND DOCS AT: https://github.com/BNDong
- * https://www.cnblogs.com/bndong/
- * @author: BNDong, dbnuo@foxmail.com
+ * https://www.cnblogs.com/lnjoy/
+ * @original_address: https://github.com/BNDong
+ * @original_author: BNDong, dbnuo@foxmail.com
+ * @changer: lnjoy, enjoy_july@163.com
  **/
 function Base() {
 
@@ -990,11 +990,14 @@ function Base() {
 
         // 判断用户是否自定义了设置
         let homeBannerText = window.cnblogsConfig.homeBannerText,
-            hitokoto = $('#hitokoto');
-        if ($.isArray(homeBannerText) && homeBannerText.length > 0) {
+            homeBannerTextAuthor = window.cnblogsConfig.homeBannerTextAuthor,
+            hitokoto = $('#hitokoto'),
+            hitokotoAuthor = $('#hitokotoAuthor');
+        if ($.isArray(homeBannerText) && $.isArray(homeBannerTextAuthor) && homeBannerText.length > 0 && homeBannerText.length==homeBannerTextAuthor.length) {
 
             let listIndex = tools.randomNum(0, homeBannerText.length - 1);
             hitokoto.text(homeBannerText[listIndex]).css('display', '-webkit-box');
+            hitokotoAuthor.text(homeBannerTextAuthor[listIndex]).show();
             return true;
 
         } else if (typeof homeBannerText === "string" && homeBannerText !== "") {
