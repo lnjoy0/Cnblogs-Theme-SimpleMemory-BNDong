@@ -1,3 +1,7 @@
+/**
+ * @changer: lnjoy, enjoy_july@163.com
+ */
+
 function myTools() {
     const tools  = this,
           colors = {
