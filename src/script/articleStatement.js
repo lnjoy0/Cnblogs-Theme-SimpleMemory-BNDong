@@ -78,7 +78,7 @@ $(document).ready(function(){
     // 设置关于作者
     var aboutHtml = window.cnblogsConfig.essaySuffix.aboutHtml
         ? window.cnblogsConfig.essaySuffix.aboutHtml
-        : '正在努力使自己变得更好。评论和私信会在第一时间回复。或者<a href="https://msg.cnblogs.com/msg/send/'+tmp[3]+'" target="_blank">直接私信</a>我。';
+        : '正在努力使自己变得更优秀。评论和私信会在第一时间回复。或者<a href="https://msg.cnblogs.com/msg/send/'+tmp[3]+'" target="_blank">直接私信</a>我。';
 
     bottom_html += '<span class="essaySuffix-right-title">关于博主</span>：' + aboutHtml + '<br>';
 
