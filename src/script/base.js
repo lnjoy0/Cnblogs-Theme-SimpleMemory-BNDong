@@ -999,6 +999,10 @@ function Base() {
             hitokoto.text(homeBannerText[listIndex]).css('display', '-webkit-box');
             hitokotoAuthor.text(homeBannerTextAuthor[listIndex]).show();
             return true;
+        }else if($.isArray(homeBannerText) && homeBannerText.length > 0){
+            let listIndex = tools.randomNum(0, homeBannerText.length - 1);
+            hitokoto.text(homeBannerText[listIndex]).css('display', '-webkit-box');
+            return true;
 
         } else if (typeof homeBannerText === "string" && homeBannerText !== "") {
 
